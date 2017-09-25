@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+		<item name="colorAccent">@color/accent</item>
+	</style>
+	
+	<style name="TitleDialog">
+		<item name="android:paddingTop">24dp</item>
+		<item name="android:paddingLeft">24dp</item>
+		<item name="android:paddingRight">24dp</item>
+		<item name="android:paddingBottom">0dp</item>
+		<item name="android:textSize">20sp</item>
+		<item name="android:textColor">?attr/android:textColorPrimary</item>
+		<item name="android:fontFamily">sans-serif-medium</item>
+	</style>
+	
+	<style name="ContentDialog">
+		<item name="android:paddingLeft">24dp</item>
+		<item name="android:paddingRight">24dp</item>
+		<item name="android:paddingTop">20dp</item>
+		<item name="android:paddingBottom">24dp</item>
+	</style>
+	
+</resources>

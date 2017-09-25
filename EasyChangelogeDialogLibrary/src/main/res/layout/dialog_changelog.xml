@@ -1,0 +1,40 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+
+	<TextView
+		android:id="@+id/id_title_changelog"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:text="@string/title_changelog"
+		style="@style/TitleDialog"/>
+
+	<TextView
+		android:id="@+id/id_version_name"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:text="1.0"
+		android:textSize="16sp"
+		android:textColor="?attr/android:textColorPrimary"
+		android:textStyle="bold"
+		android:paddingLeft="24dp"
+		android:paddingRight="24dp"
+		android:paddingTop="16dp"
+		android:paddingBottom="16dp"/>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="vertical">
+
+		<android.support.v7.widget.RecyclerView
+			android:id="@+id/ma_recyclerView"
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:clipToPadding="false"/>
+
+	</LinearLayout>
+
+</LinearLayout>
