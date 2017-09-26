@@ -63,6 +63,8 @@ public List<ItemData> getListItem()
 ```gradle
 DialogChangelog.getDialogChangelog(MainActivity.this, getListItem());
 ```
+* Look at an example of use [MainActivity.java](https://github.com/MSay2/EasyChangelogDialog/blob/master/app/src/main/java/com/msay2/changelogdialog/MainActivity.java)
+
 ### More informations
 The ```getDialogChangelog()``` method will automatically detect if your application plays on a new version and will display accordingly, everything is automated for you
 
