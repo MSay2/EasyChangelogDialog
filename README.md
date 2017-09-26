@@ -7,7 +7,7 @@ EasyChangelogDialog is a library that allows you to display a change log dialog,
 <img src="screenshots/screen_01.png" width="50%">
 
 ### Get Library
-To get the library copy the ```EasyChangelogDialog``` folder to your project
+To get the library copy the ```EasyChangelogeDialogLibrary``` folder to your project
 
 ### Use
 * First, import these ```Class``` files into your activity
@@ -63,17 +63,15 @@ public List<ItemData> getListItem()
 ```gradle
 DialogChangelog.getDialogChangelog(MainActivity.this, getListItem());
 ```
-* More informations
+### More informations
 The ```getDialogChangelog()``` method will automatically detect if your application plays on a new version and will display accordingly, everything is automated for you
 
-* Clone Git Repository
+### Clone Git Repository
 Please refresh the project so that it can work !
 
- # License
+# License
 
 ```
-EasyChangelogDialog
-
 Copyright 2017 MSay2
 
 Licensed to the Apache Software Foundation (ASF) under one or more contributor
