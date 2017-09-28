@@ -48,6 +48,7 @@ public class DialogChangelog
 	private static AlertDialog dialog;
 	private static Activity mActivity;
 	private static View mView;
+	private static List<ItemData> item_data;
 	
 	private static Preferences get(@NonNull Context context)
 	{
@@ -98,6 +99,23 @@ public class DialogChangelog
 		{
 			obtainDialogChangelog(activity, item_data);
 			setVersion(get(activity).getVersionName());
+		}
+	}
+	
+	public static class Data
+	{
+		public static List<ItemData> getDatas(String[] changelogs)
+		{
+			item_data = new ArrayList<>();
+
+			for (int i = 0; i < changelogs.length; i++)
+			{
+				ItemData item = new ItemData();
+				item.setChangelog(changelogs[i]);
+
+				item_data.add(item);
+			}
+			return item_data;
 		}
 	}
 }

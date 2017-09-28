@@ -10,41 +10,20 @@ EasyChangelogDialog is a library that allows you to display a change log dialog,
 To get the library copy the ```EasyChangelogeDialogLibrary``` folder to your project
 
 ### Use
-* First, import these ```Class``` files into your activity
+* First, note this import into your activity
 
 ```gradle
 import com.msay2.changelogeedialoglibrary.dialog.DialogChangelog;
-import com.msay2.changelogeedialoglibrary.items_datas.ItemData;
-
-import java.util.List;
-import java.util.ArrayList;
 ```
 
-* Second, create a method that will contain all your writings
+* Second, create a private variable that will contain all your writings
 
 ```gradle
-public List<ItemData> getListItem()
-{
-	// get item text
-	String[] changelog = getResources().getStringArray(R.array.changelogs);
-	// get color for the drawable
-	int color = getResources().getColor(R.color.accent);
-	item_data = new ArrayList<>();
-		
-	for (int i = 0; i < changelog.length; i ++)
-	{
-		// init ItemData class
-		ItemData item = new ItemData();
-		// get item text in method setChangelog()
-		// the text support the HTML
-		item.setChangelog(changelog[i]);
-		// get a drawable
-		item.setDrawable(R.drawable.ic_changelog_circle, color);
-			
-		item_data.add(item);
-	}
-	return item_data;
-}
+String[] changelog = getResources().getStringArray(R.array.changelogs);
+```
+or
+```gradle
+String[] changelog = {"Improvement", "Deletion", "Add new support", "Is Open Source"};
 ```
 
 * Thirdly Go to ```res/values/``` and create ```arrays.xml``` and write in file 
@@ -55,13 +34,14 @@ public List<ItemData> getListItem()
 	<item><![CDATA["Hello text is "<u>Underline</u>""]]></item>
 	<item><![CDATA["Hello text is "<i>Italic</i>""]]></item>
 	<item><![CDATA["Hello text is Normal"]]></item>
+	<item>"Hello text is Normal"</item>
 </string-array>
 ```
 
 * Fourth Go to ```MainActivity``` and write in ```onCreare``` method
 
 ```gradle
-DialogChangelog.getDialogChangelog(MainActivity.this, getListItem());
+DialogChangelog.getDialogChangelog(this, DialogChangelog.Data.getDatas(changelog));
 ```
 * Look at an example of use [MainActivity.java](https://github.com/MSay2/EasyChangelogDialog/blob/master/app/src/main/java/com/msay2/changelogdialog/MainActivity.java)
 

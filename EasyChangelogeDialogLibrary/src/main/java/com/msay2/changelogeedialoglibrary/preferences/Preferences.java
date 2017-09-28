@@ -6,6 +6,10 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.*;
+import android.content.res.TypedArray;
+
+import android.support.annotation.ColorInt;
+import android.support.annotation.AttrRes;
 
 /*
  * EasyChangelogDialog library
@@ -98,4 +102,24 @@ public class Preferences
 		
 		return version;
 	}
+	
+	@ColorInt
+    public static int getAttributeColor(Context context, @AttrRes int attr)
+	{
+        return getAttributeColor(context, attr, 0);
+    }
+
+	@ColorInt
+    public static int getAttributeColor(Context context, @AttrRes int attr, int fallback) 
+	{
+        TypedArray a = context.getTheme().obtainStyledAttributes(new int[] {attr});
+        try 
+		{
+            return a.getColor(0, fallback);
+        }
+		finally 
+		{
+            a.recycle();
+        }
+    }
 }

@@ -21,16 +21,13 @@ package com.msay2.changelogeedialoglibrary.items_datas;
 public class ItemData
 {
 	private String changelog;
-	private int drawable, color;
 	
 	public ItemData()
 	{ }
 	
-	public ItemData(String changelog, int drawable, int color)
+	public ItemData(String changelog)
 	{
 		this.changelog = changelog;
-		this.drawable = drawable;
-		this.color = color;
 	}
 	
 	public String getChangelog()
@@ -41,26 +38,5 @@ public class ItemData
 	public void setChangelog(String changelog)
 	{
 		this.changelog = changelog;
-	}
-	
-	public int getDrawable()
-	{
-		return drawable;
-	}
-	
-	public void setDrawable(int drawable, int color)
-	{
-		this.drawable = drawable;
-		this.color = color;
-	}
-	
-	public int getColor()
-	{
-		return color;
-	}
-	
-	public void setColor(int color)
-	{
-		this.color = color;
 	}
 }

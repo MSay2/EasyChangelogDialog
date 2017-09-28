@@ -3,6 +3,7 @@ package com.msay2.changelogeedialoglibrary.adapter;
 import com.msay2.changelogeedialoglibrary.R;
 import com.msay2.changelogeedialoglibrary.items_datas.ItemData;
 import com.msay2.changelogeedialoglibrary.widget.TextViewFormat;
+import com.msay2.changelogeedialoglibrary.preferences.Preferences;
 
 import android.support.v7.widget.RecyclerView;
 
@@ -58,7 +59,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
 		ItemData item = item_data.get(position);
 		
 		holder.changelog.setHtml(item.getChangelog());
-		holder.changelog.setTintedDrawable("left", item.getDrawable(), item.getColor());
+		holder.changelog.setTintedDrawable("left", R.drawable.ic_changelog_circle, Preferences.getAttributeColor(context, R.attr.colorAccent));
 	}
 
 	@Override
