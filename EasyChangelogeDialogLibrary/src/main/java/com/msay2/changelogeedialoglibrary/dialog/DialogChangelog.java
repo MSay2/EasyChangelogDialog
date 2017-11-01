@@ -102,6 +102,12 @@ public class DialogChangelog
 		}
 	}
 	
+	public static void getDialogManual(Activity activity, List<ItemData> item_data)
+	{
+		obtainDialogChangelog(activity, item_data);
+		setVersion(get(activity).getVersionName());
+	}
+	
 	public static class Data
 	{
 		public static List<ItemData> getDatas(String[] changelogs)

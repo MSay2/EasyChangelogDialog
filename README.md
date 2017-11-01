@@ -46,7 +46,8 @@ DialogChangelog.getDialogChangelog(this, DialogChangelog.Data.getDatas(changelog
 * Look at an example of use [MainActivity.java](https://github.com/MSay2/EasyChangelogDialog/blob/master/app/src/main/java/com/msay2/changelogdialog/MainActivity.java)
 
 ### More informations
-The ```getDialogChangelog()``` method will automatically detect if your application plays on a new version and will display accordingly, everything is automated for you
+The ```getDialogChangelog()``` method will automatically detect if your application plays on a new version and will display accordingly, everything is automated for you.
+The ```getDialogManual()``` Allows you to call the change log manually
 
 ### Clone Git Repository
 Please refresh the project so that it can work !
@@ -63,7 +64,7 @@ file to you under the Apache License, Version 2.0 (the "License"); you may not
 use this file except in compliance with the License. You may obtain a copy of
 the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
+   http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
